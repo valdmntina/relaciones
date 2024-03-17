@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UnoaUno</title>
+</head>
+
+<body>
+  <h1>Registros:</h1>
+  <ul>
+    <li>Nombre: {{query.place.name}}</li>
+    <li>Address: {{query.place.address}}</li>
+    <li>Employees: {{query.employees}}</li>
+  </ul>
+  <hr>
+  <h2>Restaurantes registrados con su ID</h2>
+  <ul>
+    {% for place in places %}
+    <li>id: {{place.id}} -- nombre: {{place.name}}</li>
+    {% endfor %}
+  </ul>
+</body>
+
+</html>
